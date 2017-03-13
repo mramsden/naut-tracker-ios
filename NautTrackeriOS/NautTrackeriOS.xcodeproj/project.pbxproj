@@ -10,7 +10,40 @@
 		F81FE3571E77457200C980D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3561E77457200C980D2 /* AppDelegate.swift */; };
 		F81FE35E1E77457200C980D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81FE35D1E77457200C980D2 /* Assets.xcassets */; };
 		F81FE3611E77457200C980D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81FE35F1E77457200C980D2 /* LaunchScreen.storyboard */; };
+		F81FE3691E7748AA00C980D2 /* NautTrackerData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81FE3681E7748AA00C980D2 /* NautTrackerData.framework */; };
+		F81FE36A1E7748AA00C980D2 /* NautTrackerData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F81FE3681E7748AA00C980D2 /* NautTrackerData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F81FE3701E774A8100C980D2 /* AstronautsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE36F1E774A8100C980D2 /* AstronautsListCoordinator.swift */; };
+		F81FE3821E774AE000C980D2 /* AstronautsListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3811E774AE000C980D2 /* AstronautsListCoordinatorTests.swift */; };
+		F81FE3841E774C8500C980D2 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3831E774C8500C980D2 /* AppDelegateTests.swift */; };
+		F81FE3861E77511500C980D2 /* AstronautsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */; };
+		F81FE3881E77512400C980D2 /* AstronautsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */; };
+		F81FE38A1E7752CF00C980D2 /* AstronautsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */; };
+		F81FE38C1E77559800C980D2 /* AstronautsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F81FE37A1E774AAC00C980D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81FE34B1E77457200C980D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F81FE3521E77457200C980D2;
+			remoteInfo = NautTrackeriOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F81FE36B1E7748AA00C980D2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F81FE36A1E7748AA00C980D2 /* NautTrackerData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F81FE3531E77457200C980D2 /* NautTrackeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NautTrackeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +51,28 @@
 		F81FE35D1E77457200C980D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81FE3601E77457200C980D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F81FE3621E77457200C980D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81FE3681E7748AA00C980D2 /* NautTrackerData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NautTrackerData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81FE36F1E774A8100C980D2 /* AstronautsListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListCoordinator.swift; sourceTree = "<group>"; };
+		F81FE3751E774AAC00C980D2 /* NautTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NautTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81FE3791E774AAC00C980D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81FE3811E774AE000C980D2 /* AstronautsListCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListCoordinatorTests.swift; sourceTree = "<group>"; };
+		F81FE3831E774C8500C980D2 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsInteractor.swift; sourceTree = "<group>"; };
+		F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListPresenter.swift; sourceTree = "<group>"; };
+		F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListViewController.swift; sourceTree = "<group>"; };
+		F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F81FE3501E77457200C980D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81FE3691E7748AA00C980D2 /* NautTrackerData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81FE3721E774AAC00C980D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				F81FE3551E77457200C980D2 /* NautTrackeriOS */,
+				F81FE3761E774AAC00C980D2 /* NautTrackerTests */,
 				F81FE3541E77457200C980D2 /* Products */,
+				F81FE36C1E7748B600C980D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F81FE3531E77457200C980D2 /* NautTrackeriOS.app */,
+				F81FE3751E774AAC00C980D2 /* NautTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,12 +104,67 @@
 		F81FE3551E77457200C980D2 /* NautTrackeriOS */ = {
 			isa = PBXGroup;
 			children = (
+				F81FE36D1E774A5500C980D2 /* Features */,
 				F81FE3561E77457200C980D2 /* AppDelegate.swift */,
 				F81FE35D1E77457200C980D2 /* Assets.xcassets */,
 				F81FE35F1E77457200C980D2 /* LaunchScreen.storyboard */,
 				F81FE3621E77457200C980D2 /* Info.plist */,
 			);
 			path = NautTrackeriOS;
+			sourceTree = "<group>";
+		};
+		F81FE36C1E7748B600C980D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE3681E7748AA00C980D2 /* NautTrackerData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81FE36D1E774A5500C980D2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE36E1E774A5F00C980D2 /* AstronautsList */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		F81FE36E1E774A5F00C980D2 /* AstronautsList */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE36F1E774A8100C980D2 /* AstronautsListCoordinator.swift */,
+				F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */,
+				F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */,
+				F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */,
+				F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */,
+			);
+			name = AstronautsList;
+			sourceTree = "<group>";
+		};
+		F81FE3761E774AAC00C980D2 /* NautTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE37F1E774ABB00C980D2 /* Features */,
+				F81FE3831E774C8500C980D2 /* AppDelegateTests.swift */,
+				F81FE3791E774AAC00C980D2 /* Info.plist */,
+			);
+			path = NautTrackerTests;
+			sourceTree = "<group>";
+		};
+		F81FE37F1E774ABB00C980D2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE3801E774AC300C980D2 /* AstronautsList */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		F81FE3801E774AC300C980D2 /* AstronautsList */ = {
+			isa = PBXGroup;
+			children = (
+				F81FE3811E774AE000C980D2 /* AstronautsListCoordinatorTests.swift */,
+			);
+			name = AstronautsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +177,7 @@
 				F81FE34F1E77457200C980D2 /* Sources */,
 				F81FE3501E77457200C980D2 /* Frameworks */,
 				F81FE3511E77457200C980D2 /* Resources */,
+				F81FE36B1E7748AA00C980D2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,6 +187,24 @@
 			productName = NautTrackeriOS;
 			productReference = F81FE3531E77457200C980D2 /* NautTrackeriOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F81FE3741E774AAC00C980D2 /* NautTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81FE37C1E774AAC00C980D2 /* Build configuration list for PBXNativeTarget "NautTrackerTests" */;
+			buildPhases = (
+				F81FE3711E774AAC00C980D2 /* Sources */,
+				F81FE3721E774AAC00C980D2 /* Frameworks */,
+				F81FE3731E774AAC00C980D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F81FE37B1E774AAC00C980D2 /* PBXTargetDependency */,
+			);
+			name = NautTrackerTests;
+			productName = NautTrackerTests;
+			productReference = F81FE3751E774AAC00C980D2 /* NautTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +220,13 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4ST5782T4K;
 						ProvisioningStyle = Automatic;
+					};
+					F81FE3741E774AAC00C980D2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4ST5782T4K;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F81FE3521E77457200C980D2;
 					};
 				};
 			};
@@ -109,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				F81FE3521E77457200C980D2 /* NautTrackeriOS */,
+				F81FE3741E774AAC00C980D2 /* NautTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +259,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F81FE3731E774AAC00C980D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,11 +273,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81FE3881E77512400C980D2 /* AstronautsListPresenter.swift in Sources */,
+				F81FE38A1E7752CF00C980D2 /* AstronautsListViewController.swift in Sources */,
+				F81FE38C1E77559800C980D2 /* AstronautsViewController.swift in Sources */,
+				F81FE3861E77511500C980D2 /* AstronautsInteractor.swift in Sources */,
+				F81FE3701E774A8100C980D2 /* AstronautsListCoordinator.swift in Sources */,
 				F81FE3571E77457200C980D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F81FE3711E774AAC00C980D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81FE3841E774C8500C980D2 /* AppDelegateTests.swift in Sources */,
+				F81FE3821E774AE000C980D2 /* AstronautsListCoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F81FE37B1E774AAC00C980D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F81FE3521E77457200C980D2 /* NautTrackeriOS */;
+			targetProxy = F81FE37A1E774AAC00C980D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F81FE35F1E77457200C980D2 /* LaunchScreen.storyboard */ = {
@@ -265,6 +430,37 @@
 			};
 			name = Release;
 		};
+		F81FE37D1E774AAC00C980D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4ST5782T4K;
+				INFOPLIST_FILE = NautTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitsden.NautTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NautTrackeriOS.app/NautTrackeriOS";
+			};
+			name = Debug;
+		};
+		F81FE37E1E774AAC00C980D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4ST5782T4K;
+				INFOPLIST_FILE = NautTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitsden.NautTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NautTrackeriOS.app/NautTrackeriOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -282,6 +478,14 @@
 			buildConfigurations = (
 				F81FE3661E77457200C980D2 /* Debug */,
 				F81FE3671E77457200C980D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F81FE37C1E774AAC00C980D2 /* Build configuration list for PBXNativeTarget "NautTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81FE37D1E774AAC00C980D2 /* Debug */,
+				F81FE37E1E774AAC00C980D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

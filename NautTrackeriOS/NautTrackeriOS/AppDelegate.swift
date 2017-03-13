@@ -1,22 +1,25 @@
-//
-//  AppDelegate.swift
-//  NautTrackeriOS
-//
-//  Created by Marcus Ramsden on 13/03/2017.
-//  Copyright © 2017 Marcus Ramsden. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    let astronautsListCoordinator: AstronautsListCoordinator
+    var window: UIWindow? = nil
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    override init() {
+        self.astronautsListCoordinator = DefaultAstronautsListCoordinator()
+    }
 
-        return true
+    init(astronautsListCoordinator: AstronautsListCoordinator) {
+        self.astronautsListCoordinator = astronautsListCoordinator
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        guard self.window == nil else { return }
+
+        let window = astronautsListCoordinator.makeMainWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        self.window = window
     }
 
 }
-
