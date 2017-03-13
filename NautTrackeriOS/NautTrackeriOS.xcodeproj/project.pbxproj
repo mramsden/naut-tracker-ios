@@ -16,7 +16,7 @@
 		F81FE3821E774AE000C980D2 /* AstronautsListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3811E774AE000C980D2 /* AstronautsListCoordinatorTests.swift */; };
 		F81FE3841E774C8500C980D2 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3831E774C8500C980D2 /* AppDelegateTests.swift */; };
 		F81FE3861E77511500C980D2 /* AstronautsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */; };
-		F81FE3881E77512400C980D2 /* AstronautsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */; };
+		F81FE3881E77512400C980D2 /* AstronautsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3871E77512400C980D2 /* AstronautsPresenter.swift */; };
 		F81FE38A1E7752CF00C980D2 /* AstronautsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */; };
 		F81FE38C1E77559800C980D2 /* AstronautsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		F81FE3811E774AE000C980D2 /* AstronautsListCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListCoordinatorTests.swift; sourceTree = "<group>"; };
 		F81FE3831E774C8500C980D2 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsInteractor.swift; sourceTree = "<group>"; };
-		F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListPresenter.swift; sourceTree = "<group>"; };
+		F81FE3871E77512400C980D2 /* AstronautsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsPresenter.swift; sourceTree = "<group>"; };
 		F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsListViewController.swift; sourceTree = "<group>"; };
 		F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +134,7 @@
 			children = (
 				F81FE36F1E774A8100C980D2 /* AstronautsListCoordinator.swift */,
 				F81FE3851E77511500C980D2 /* AstronautsInteractor.swift */,
-				F81FE3871E77512400C980D2 /* AstronautsListPresenter.swift */,
+				F81FE3871E77512400C980D2 /* AstronautsPresenter.swift */,
 				F81FE38B1E77559800C980D2 /* AstronautsViewController.swift */,
 				F81FE3891E7752CF00C980D2 /* AstronautsListViewController.swift */,
 			);
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81FE3881E77512400C980D2 /* AstronautsListPresenter.swift in Sources */,
+				F81FE3881E77512400C980D2 /* AstronautsPresenter.swift in Sources */,
 				F81FE38A1E7752CF00C980D2 /* AstronautsListViewController.swift in Sources */,
 				F81FE38C1E77559800C980D2 /* AstronautsViewController.swift in Sources */,
 				F81FE3861E77511500C980D2 /* AstronautsInteractor.swift in Sources */,
@@ -480,6 +480,7 @@
 				F81FE3671E77457200C980D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F81FE37C1E774AAC00C980D2 /* Build configuration list for PBXNativeTarget "NautTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +489,7 @@
 				F81FE37E1E774AAC00C980D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

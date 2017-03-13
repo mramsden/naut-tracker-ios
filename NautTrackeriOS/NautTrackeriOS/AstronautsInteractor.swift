@@ -2,12 +2,18 @@ import Foundation
 
 protocol AstronautsInteractor {
 
-    var presenter: AstronautsListPresenter { get set }
+    var presenter: AstronautsPresenter { get set }
+
+    func fetchAstronauts()
 
 }
 
 struct DefaultAstronautsInteractor: AstronautsInteractor {
 
-    var presenter: AstronautsListPresenter
+    var presenter: AstronautsPresenter
+
+    func fetchAstronauts() {
+        presenter.loadingDidStart()
+    }
 
 }

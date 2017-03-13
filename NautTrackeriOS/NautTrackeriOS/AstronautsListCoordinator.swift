@@ -10,12 +10,11 @@ extension AstronautsListCoordinator {
 
     func makeMainWindow(frame: CGRect) -> UIWindow {
         let window = UIWindow(frame: frame)
-        window.backgroundColor = .red
 
-        var interactor = DefaultAstronautsInteractor(presenter: DefaultAstronautsListPresenter())
+        var interactor = DefaultAstronautsInteractor(presenter: DefaultAstronautsPresenter())
         let viewController = AstronautsViewController(interactor: interactor)
 
-        interactor.presenter.view = viewController
+        interactor.presenter.outputHandler = viewController
 
         window.rootViewController = viewController
 
