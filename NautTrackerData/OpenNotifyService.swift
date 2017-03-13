@@ -1,15 +1,5 @@
 import Foundation
 
-enum OpenNotifyClientError: Error {
-    case networkOffline
-    case networkTimeout
-    case unknown
-}
-
-protocol OpenNotifyClient {
-    func fetchAstronauts(completion: ([String: Any]?, OpenNotifyClientError?) -> Void)
-}
-
 public enum OpenNotifyServiceError: Error {
     case transportOffline
     case serviceError
@@ -19,7 +9,7 @@ public struct OpenNotifyService {
 
     let client: OpenNotifyClient
 
-    func fetchAstronauts(completion: ([Astronaut]?, OpenNotifyServiceError?) -> Void) {
+    func fetchAstronauts(completion: @escaping ([Astronaut]?, OpenNotifyServiceError?) -> Void) {
         client.fetchAstronauts { data, error in
             if let error = error {
                 switch error {

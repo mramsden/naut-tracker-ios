@@ -61,7 +61,7 @@ private struct TestClient: OpenNotifyClient {
         self.error = error
     }
 
-    func fetchAstronauts(completion: ([String: Any]?, OpenNotifyClientError?) -> Void) {
+    func fetchAstronauts(completion: @escaping ([String: Any]?, OpenNotifyClientError?) -> Void) {
         completion(data, error)
     }
 
