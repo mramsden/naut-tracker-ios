@@ -11,6 +11,8 @@
 		F81FE31A1E7721A200C980D2 /* NautTrackerData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81FE3081E7720AE00C980D2 /* NautTrackerData.framework */; };
 		F81FE3211E7721D500C980D2 /* AstronautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3201E7721D500C980D2 /* AstronautTests.swift */; };
 		F81FE3231E77222400C980D2 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3221E77222400C980D2 /* Astronaut.swift */; };
+		F81FE3251E77257700C980D2 /* OpenNotifyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3241E77257700C980D2 /* OpenNotifyServiceTests.swift */; };
+		F81FE3271E7725CB00C980D2 /* OpenNotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FE3261E7725CB00C980D2 /* OpenNotifyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		F81FE3191E7721A200C980D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F81FE3201E7721D500C980D2 /* AstronautTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautTests.swift; sourceTree = "<group>"; };
 		F81FE3221E77222400C980D2 /* Astronaut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		F81FE3241E77257700C980D2 /* OpenNotifyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenNotifyServiceTests.swift; sourceTree = "<group>"; };
+		F81FE3261E7725CB00C980D2 /* OpenNotifyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenNotifyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				F81FE3221E77222400C980D2 /* Astronaut.swift */,
+				F81FE3261E7725CB00C980D2 /* OpenNotifyService.swift */,
 				F81FE30B1E7720AE00C980D2 /* NautTrackerData.h */,
 				F81FE30C1E7720AE00C980D2 /* Info.plist */,
 			);
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F81FE3201E7721D500C980D2 /* AstronautTests.swift */,
+				F81FE3241E77257700C980D2 /* OpenNotifyServiceTests.swift */,
 				F81FE3191E7721A200C980D2 /* Info.plist */,
 			);
 			path = NautTrackerDataTests;
@@ -202,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81FE3271E7725CB00C980D2 /* OpenNotifyService.swift in Sources */,
 				F81FE3231E77222400C980D2 /* Astronaut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81FE3251E77257700C980D2 /* OpenNotifyServiceTests.swift in Sources */,
 				F81FE3211E7721D500C980D2 /* AstronautTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
