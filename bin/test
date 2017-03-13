@@ -5,8 +5,8 @@ $my_dir/clean
 
 function test() {
     echo "Running tests..."
-    xcodebuild -project NautTracker.xcodeproj \
-        -scheme NautTrackerData \
+    xcodebuild -workspace NautTracker.xcworkspace \
+        -scheme $1 \
         -sdk iphonesimulator10.2 \
         -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.2' \
         -enableCodeCoverage YES \
@@ -14,11 +14,12 @@ function test() {
 }
 
 function coverage() {
-    echo "Generating coverage reports..."
-    slather coverage --scheme NautTrackerData \
-        --html --output-directory reports \
-        NautTracker.xcodeproj > /dev/null
+    slather coverage --workspace NautTracker.xcworkspace \
+        --scheme NautTrackerData \
+	--decimals 0 \
+        $1.xcodeproj
 }
 
-test && coverage
+
+test "NautTrackerData" && coverage "NautTrackerData"
 echo "Done!"

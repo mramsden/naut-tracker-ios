@@ -174,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F81FE3001E771EC400C980D2 /* Build configuration list for PBXProject "NautTracker" */;
+			buildConfigurationList = F81FE3001E771EC400C980D2 /* Build configuration list for PBXProject "NautTrackerData" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -486,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F81FE3001E771EC400C980D2 /* Build configuration list for PBXProject "NautTracker" */ = {
+		F81FE3001E771EC400C980D2 /* Build configuration list for PBXProject "NautTrackerData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F81FE3011E771EC400C980D2 /* Debug */,
