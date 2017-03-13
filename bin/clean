@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function clean() {
+    echo -n "Cleaning..."
+    rm -rf build reports
+}
+
+clean
+
+echo "Done!"

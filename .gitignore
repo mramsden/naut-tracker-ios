@@ -53,5 +53,6 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+reports
 
 # End of https://www.gitignore.io/api/osx,xcode

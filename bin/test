@@ -1,0 +1,24 @@
+#!/bin/bash
+
+my_dir="$(dirname "$0")"
+$my_dir/clean
+
+function test() {
+    echo "Running tests..."
+    xcodebuild -project NautTracker.xcodeproj \
+        -scheme NautTrackerData \
+        -sdk iphonesimulator10.2 \
+        -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.2' \
+        -enableCodeCoverage YES \
+        test | xcpretty --test
+}
+
+function coverage() {
+    echo "Generating coverage reports..."
+    slather coverage --scheme NautTrackerData \
+        --html --output-directory reports \
+        NautTracker.xcodeproj > /dev/null
+}
+
+test && coverage
+echo "Done!"
