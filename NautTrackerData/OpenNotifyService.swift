@@ -23,8 +23,12 @@ public struct OpenNotifyService {
                 return completion(nil, .serviceError)
             }
 
-            let astronauts: [Astronaut]? = try? people.map(Astronaut.init)
-            completion(astronauts, nil)
+            do {
+                let astronauts: [Astronaut]? = try people.map(Astronaut.init)
+                completion(astronauts, nil)
+            } catch {
+                completion(nil, .serviceError)
+            }
         }
     }
 

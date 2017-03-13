@@ -22,6 +22,15 @@ final class OpenNotifyServiceTests: XCTestCase {
         XCTAssertEqual(astronauts?.first?.craft, "Apollo 11")
     }
 
+    func testErrorReturnedWhenFetchAstronautsEncountersBadData() {
+        let client = TestClient(data: ["people": [[:]]])
+        let service = OpenNotifyService(client: client)
+
+        service.fetchAstronauts() { _, error in
+            XCTAssertTrue(error == .serviceError)
+        }
+    }
+
     func testFetchAstronautsReturnsClientErrorIfUnknownNetworkErrorOccurs() {
         let client = TestClient(error: .unknown)
         let service = OpenNotifyService(client: client)
