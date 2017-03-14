@@ -1,13 +1,16 @@
 import UIKit
+import NautTrackerData
 
 class AstronautsViewController: UIViewController {
 
     let interactor: AstronautsInteractor
+    let astronautsListViewController: AstronautsListViewController
 
     var hostView: AstronautsView { return view as! AstronautsView }
 
     init(interactor: AstronautsInteractor) {
         self.interactor = interactor
+        astronautsListViewController = AstronautsListViewController(style: .plain)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -17,6 +20,10 @@ class AstronautsViewController: UIViewController {
 
     override func loadView() {
         let view = AstronautsView()
+        astronautsListViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentView = astronautsListViewController.view
+        addChildViewController(astronautsListViewController)
+        astronautsListViewController.didMove(toParentViewController: self)
         self.view = view
     }
 
@@ -40,9 +47,28 @@ extension AstronautsViewController: AstronautsPresenterOutputHandler {
             hostView.loading = true
         case .empty:
             hostView.loading = false
-        case .loaded(_):
+        case .loaded(let astronauts):
             hostView.loading = false
+            astronautsListViewController.astronautDataSource = AstronautsDataSource(astronauts: astronauts)
         }
+    }
+
+}
+
+private struct AstronautsDataSource: AstronautsListViewControllerDataSource {
+
+    private let astronauts: [Astronaut]
+
+    init(astronauts: [Astronaut]) {
+        self.astronauts = astronauts
+    }
+
+    var count: Int {
+        return astronauts.count
+    }
+
+    func astronaut(atIndex index: Int) -> Astronaut {
+        return astronauts[index]
     }
 
 }
@@ -62,11 +88,32 @@ class AstronautsView: UIView {
 
     var loading: Bool = false {
         didSet {
+            contentView?.isHidden = loading
             if loading {
                 activityIndicator.startAnimating()
             } else {
                 activityIndicator.stopAnimating()
             }
+        }
+    }
+
+    var contentView: UIView? {
+        willSet {
+            contentView?.removeFromSuperview()
+        }
+        didSet {
+            guard let contentView = contentView else { return }
+            insertSubview(contentView, belowSubview: navigationBar)
+            if let scrollView = contentView as? UIScrollView {
+                scrollView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+            }
+
+            NSLayoutConstraint.activate([
+                contentView.widthAnchor.constraint(equalTo: widthAnchor),
+                contentView.heightAnchor.constraint(equalTo: heightAnchor),
+                contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
+                contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            ])
         }
     }
 

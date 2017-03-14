@@ -1,16 +1,39 @@
 import UIKit
+import NautTrackerData
 
-class AstronautsListViewController: UIViewController {
+protocol AstronautsListViewControllerDataSource {
 
-    let interactor: AstronautsInteractor
+    var count: Int { get }
+    func astronaut(atIndex index: Int) -> Astronaut
 
-    init(interactor: AstronautsInteractor) {
-        self.interactor = interactor
-        super.init(nibName: nil, bundle: nil)
+}
+
+class AstronautsListViewController: UITableViewController {
+
+    var astronautDataSource: AstronautsListViewControllerDataSource? {
+        didSet {
+            tableView.reloadData()
+        }
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "astronaut")
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return astronautDataSource?.count ?? 0
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "astronaut", for: indexPath)
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let astronaut = astronautDataSource?.astronaut(atIndex: indexPath.row)
+        cell.textLabel?.text = astronaut?.name
+        cell.detailTextLabel?.text = astronaut?.craft
     }
 
 }

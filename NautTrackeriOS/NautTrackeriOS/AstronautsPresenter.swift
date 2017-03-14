@@ -18,6 +18,7 @@ protocol AstronautsPresenter {
     weak var outputHandler: AstronautsPresenterOutputHandler? { get set }
 
     func loadingDidStart()
+    func didLoad(astronauts: [Astronaut])
 
 }
 
@@ -26,9 +27,14 @@ class DefaultAstronautsPresenter: AstronautsPresenter {
     weak var outputHandler: AstronautsPresenterOutputHandler?
 
     func loadingDidStart() {
-        outputHandler?.state(didChangeTo: .loading)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.outputHandler?.state(didChangeTo: .empty)
+        DispatchQueue.main.async {
+            self.outputHandler?.state(didChangeTo: .loading)
+        }
+    }
+
+    func didLoad(astronauts: [Astronaut]) {
+        DispatchQueue.main.async {
+            self.outputHandler?.state(didChangeTo: .loaded(astronauts))
         }
     }
 

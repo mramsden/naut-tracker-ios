@@ -9,7 +9,11 @@ public struct OpenNotifyService {
 
     let client: OpenNotifyClient
 
-    func fetchAstronauts(completion: @escaping ([Astronaut]?, OpenNotifyServiceError?) -> Void) {
+    public init(client: OpenNotifyClient) {
+        self.client = client
+    }
+
+    public func fetchAstronauts(completion: @escaping ([Astronaut]?, OpenNotifyServiceError?) -> Void) {
         client.fetchAstronauts { data, error in
             if let error = error {
                 switch error {

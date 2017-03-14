@@ -1,4 +1,5 @@
 import Foundation
+import NautTrackerData
 
 protocol AstronautsInteractor {
 
@@ -14,6 +15,10 @@ struct DefaultAstronautsInteractor: AstronautsInteractor {
 
     func fetchAstronauts() {
         presenter.loadingDidStart()
+        let service = OpenNotifyService(client: URLSession(configuration: .ephemeral))
+        service.fetchAstronauts { astronauts, error in
+            self.presenter.didLoad(astronauts: astronauts ?? [])
+        }
     }
 
 }

@@ -1,18 +1,18 @@
 import Foundation
 
-enum OpenNotifyClientError: Error {
+public enum OpenNotifyClientError: Error {
     case networkOffline
     case networkTimeout
     case unknown
 }
 
-protocol OpenNotifyClient {
+public protocol OpenNotifyClient {
     func fetchAstronauts(completion: @escaping ([String: Any]?, OpenNotifyClientError?) -> Void)
 }
 
 extension URLSession: OpenNotifyClient {
 
-    func fetchAstronauts(completion: @escaping ([String: Any]?, OpenNotifyClientError?) -> Void) {
+    public func fetchAstronauts(completion: @escaping ([String: Any]?, OpenNotifyClientError?) -> Void) {
         dataTask(with: URL(string: "http://api.open-notify.org/astros.json")!) { data, response, error in
             if error?.networkOffline == true { return completion(nil, .networkOffline) }
             if error?.networkTimeout == true { return completion(nil, .networkTimeout) }
